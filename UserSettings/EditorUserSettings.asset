@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!162 &1
+EditorUserSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 4
+  m_ConfigSettings:
+    RecentlyUsedScenePath-0:
+      value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
+      flags: 0
+    RecentlyUsedScenePath-1:
+      value: 2242470311464673180909623d2c5c11065734232e3a272234661936efef7b2be1e238ecf475323d300ca1290a371526
+      flags: 0
+    RecentlyUsedScenePath-2:
+      value: 224247031146467d010103261527603704180d24283b69032e2c1336f1af042ae7c625ecea383a303d3dcd290d320536fc0d1a45e305031f08
+      flags: 0
+    RecentlyUsedScenePath-3:
+      value: 224247031146467d010103261527603704180d24283b69032e2c1336f1af073be7e933d6c6742a323016f6
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 224247031146467203180921042c4d5d45051c1a293a353f230a123df6f23b34eee224d6cb130b19762be12a013d1530e0352b0ae50209271e0df2031eeb191c1f8b0dcb13dc06
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 224247031146467a1e1d093620225c1b17101d39630033372869303ce1e12478ceee34fbe62826733d07e2334b2d023afc0f1a44fb0a03055f1bf30705e6
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 224247031146467a1e1d093620225c1b17101d3963012826282a093cf0ad672ae6d733fbf435311f360cfb2e0b320d3ae0352522c22e45221f18f80d05f0022c33c40bcc19e4101fc41413dac412dfadc0d8ddfec1
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 2242470311464668190f1e3615317e0305120c39631c2e393f2d2d36f0f33b36c1e838fdf53533303c10a00f073b0f3ae1453907f7120d191e1bf30a5fea1e1a05dc
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c6b2029270a25382732293d2c3136f4e53876f7e93ffdfe
+      flags: 0
+    vcSharedLogLevel:
+      value: 0d5e400f0650
+      flags: 0
+  m_VCAutomaticAdd: 1
+  m_VCDebugCom: 0
+  m_VCDebugCmd: 0
+  m_VCDebugOut: 0
+  m_SemanticMergeMode: 2
+  m_VCShowFailedCheckout: 1
+  m_VCOverwriteFailedCheckoutAssets: 1
+  m_VCProjectOverlayIcons: 1
+  m_VCHierarchyOverlayIcons: 1
+  m_VCOtherOverlayIcons: 1
+  m_VCAllowAsyncUpdate: 1
