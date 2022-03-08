@@ -16,8 +16,7 @@ public class TP_Controller : MonoBehaviour
     [SerializeField] private float groundedOffset;
     [Tooltip("The interpolation factor for input values but also for animation blending")]
     [SerializeField] [Range(0f, 2f)] private float inputSmoothTime = 0.1f;
-    [SerializeField] private bool isUsingPistol;
-    [SerializeField] private bool isUsingRifle;
+    
     
     //private Variables
     private float angleSmoothVelocity;
@@ -40,6 +39,8 @@ public class TP_Controller : MonoBehaviour
     private bool isPlayerRunning;
     private bool isPlayerCrouched;
     private bool isPlayerJumping;
+    private bool isUsingPistol;
+    private bool isUsingRifle;
     InputAction sprintAction;
     //Serialized components
     [SerializeField] private Transform CameraTransform;
@@ -48,6 +49,25 @@ public class TP_Controller : MonoBehaviour
     //private Components
     Animator playerAnimController;
     PlayerInputActions playerInputActions;
+
+    //Getters
+    public bool IsUsingPistol()
+    {
+        return isUsingPistol;
+    }
+    public bool IsUsingRifle()
+    {
+        return isUsingRifle;
+    }
+    //Setters
+    public void SetIsUsingPistol(bool isusingpistol)
+    {
+        isUsingPistol = isusingpistol;
+    }
+    public void SetIsUsingRifle(bool isusingrifle)
+    {
+        isUsingRifle = isusingrifle;
+    }
 
     private void Awake() {
         playerInputActions = new PlayerInputActions();
@@ -68,15 +88,24 @@ public class TP_Controller : MonoBehaviour
     void Update()
     {
         movementInputVector = playerInputActions.Movement.Movement.ReadValue<Vector2>();
-        if(!isUsingPistol) {
+        if(!isUsingPistol) 
+        {
             //HandlePlayerMovement(movementInputVector);
             HandlePlayerStrafe(movementInputVector);
             playerAnimController.SetBool(animIsPistolID, false);
-            //playerAnimController.SetBool(animIsRifleID, false);
+
+            playerAnimController.SetBool(animIsRifleID, false);
         }        
-        else {
+        else if(isUsingPistol && !isUsingRifle)
+        {
             playerAnimController.SetBool(animIsPistolID, true);
-            //playerAnimController.SetBool(animIsRifleID, true);
+            playerAnimController.SetBool(animIsRifleID, false);
+            HandlePlayerGunMovement(movementInputVector);
+        }
+        else if(isUsingRifle && !isUsingPistol) 
+        {
+            playerAnimController.SetBool(animIsRifleID, true);
+            playerAnimController.SetBool(animIsPistolID, false);
             HandlePlayerGunMovement(movementInputVector);
         }
         
